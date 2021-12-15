@@ -1,6 +1,6 @@
 package com.webtoapp.app
 
-object SocialNetworksUrl {
+object SocialNetworkUrls {
     fun socialNetworks() = listOf(
         "telegram.me",
         "t.me",

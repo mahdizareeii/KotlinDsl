@@ -6,7 +6,7 @@ import android.os.Build
 import android.os.Bundle
 import android.webkit.*
 import androidx.appcompat.app.AppCompatActivity
-import com.webtoapp.app.SocialNetworksUrl.socialNetworks
+import com.webtoapp.app.SocialNetworkUrls.socialNetworks
 import com.webtoapp.app.WebViewHelper.WebView
 import com.webtoapp.app.WebViewHelper.webSetting
 
