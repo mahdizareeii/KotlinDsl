@@ -10,10 +10,9 @@ import com.webtoapp.app.SocialNetworkUrls.socialNetworks
 import com.webtoapp.app.WebViewHelper.WebView
 import com.webtoapp.app.WebViewHelper.webSetting
 
-
 class MainActivity : AppCompatActivity() {
 
-    private val webSiteUrl = "https://google.com"
+    private val webSiteUrl = "https://web.telegram.org/"
 
 
     private lateinit var webView: WebView
@@ -22,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(
             WebView(this) {
                 keepScreenOn = true
+
+                webChromeClient = object : WebChromeClient(){}
 
                 webViewClient = object : WebViewClient() {
                     override fun onPageFinished(view: WebView?, url: String?) {
@@ -59,6 +60,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(
                         Intent(Intent.ACTION_VIEW).apply {
                             data = Uri.parse(url)
+                            type = mimeType
                         }
                     )
                 }
